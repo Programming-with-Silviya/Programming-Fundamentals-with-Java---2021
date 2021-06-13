@@ -1,1 +1,37 @@
+import java.util.Scanner;
+
+public class _01DataTypes {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String input = sc.nextLine();
+        switch (input) {
+            case "int":
+                getInt(sc);
+                break;
+            case "real":
+                getReal(sc);
+                break;
+            case "string":
+                getString(sc);
+                break;
+        }
+
+    }
+
+    private static void getInt(Scanner sc) {
+        int number = Integer.parseInt(sc.nextLine());
+        System.out.println(number * 2);
+    }
+
+    private static void getReal(Scanner sc) {
+        double number = Double.parseDouble(sc.nextLine());
+        System.out.printf("%.2f", number * 1.5);
+    }
+
+    private static void getString(Scanner sc) {
+        String text = sc.nextLine();
+        System.out.println("$" + text + "$");
+
+    }
+}
 
